@@ -1,0 +1,18 @@
+<h1><%= @pet.name.capitalize %> The <%= @pet.species.capitalize%></h1>
+
+<h3>
+    <dl>
+        <dt>
+            Pet Age: <%= Time.current.year-@pet.year_of_birth %> 
+            <br>
+            <%if @pet.good_with_kids == true%>
+            Good with children
+            <%elsif @pet.good_with_kids == false%>
+            Prefers a home without children
+            <%else%>
+            This will post if friendly is nil or empty
+            <%end%>
+        </dt>
+        <br>
+    </dl>
+</h3>

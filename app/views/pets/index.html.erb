@@ -1,0 +1,12 @@
+<h1>List of Pets</h1>
+
+<h3>
+    <ol>
+        <% @pets.each do |pet| %>
+            <li>Pet Name: <%= pet.name.capitalize %> The <%= pet.species.capitalize %> 
+            </li>
+            <%= link_to "Details", pet_path(pet.id)%>
+            <br>
+        <% end %>
+    </ol>
+</h3>
